@@ -33,7 +33,16 @@ public class WeatherInfo {
         this.temperature = temperature;
     }
 
-    public void addCity (String city){
+    public void addCity(String city) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "WeatherInfo{" +
+                "city='" + city + '\'' +
+                ", description='" + description + '\'' +
+                ", temperature=" + temperature +
+                '}';
     }
 }

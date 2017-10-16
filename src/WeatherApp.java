@@ -12,18 +12,18 @@ public class WeatherApp {
         FileReading fileReading = new FileReading();
 
         int count = 0;
-        String city = "wrocław";
+        String city = "";
 
         try {
             WeatherApi api = new WeatherApi();
-            city = fileReading.fileReading(count);
-            weatherInfoArrayList.add(count, new WeatherInfo(city, api.getDescription(city), api.getTemperature
-                    (city)));
-            FileWriting.fileWriting(weatherInfoArrayList.get(count));
-            int temperature = api.getTemperature(city);
-            String description = api.getDescription(city);
-            System.out.printf("Pogoda w mieście %s: %s\n", city, description);
-            System.out.printf("Aktualna temperatura: %d stopni\n", temperature);
+            do {
+                city = fileReading.fileReading(count);
+                System.out.println(city);
+                weatherInfoArrayList.add(count, new WeatherInfo(city, api.getDescription(city), api.getTemperature(city)));
+                FileWriting.fileWriting(weatherInfoArrayList.get(count));
+                System.out.println(weatherInfoArrayList.get(count).toString());
+                count++;
+            } while (count < fileReading.countLine());
         } catch (IOException e) {
             System.err.println("Nie udało się pobrać informacji dla miasta " + city);
         }
