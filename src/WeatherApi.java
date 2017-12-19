@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WeatherApi {
+
     private static final String TEMP_PATTERN = "<p class=\"today-temp\">\\+(.*?)&deg;C</p>";
     private static final String DESC_PATTERN = "<img width=\"188\" height=\"150\" src=\"(.*?)\" alt=\"(.*?)\"/>";
     private static final String URL_PATTERN = "https://sinoptik.pl/pogoda-";
@@ -51,7 +52,7 @@ public class WeatherApi {
         Pattern pattern = Pattern.compile(DESC_PATTERN);
         Matcher matcher = pattern.matcher(source);
         if (!matcher.find()) {
-            throw new NoSuchElementException("Nie znaleziono temperatury");
+            throw new NoSuchElementException("Nie znaleziono opisu");
         }
         return matcher.group(2);
     }

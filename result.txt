@@ -1,0 +1,19 @@
+rabat;Zachmurzenie z rozpogodzeniami, drobny deszcz;11
+teheran;Pogodnie;8
+bejrut;Zachmurzenie zmienne;19
+trypolis;Zachmurzenie całkowite, silny deszcz;10
+sana;Pogodnie;6
+damaszek;Zachmurzenie zmienne;12
+adana;Zachmurzenie z rozpogodzeniami;14
+kinszasa;Pogodnie;27
+bagdad;Zachmurzenie z rozpogodzeniami;15
+ankara;Zachmurzenie zmienne;6
+mosul;Zachmurzenie całkowite;11
+kirkuk;Zachmurzenie całkowite;13
+mekka;Pogodnie;25
+medyna;Pogodnie;17
+lizbona;Pogodnie;12
+rzym;Pogodnie;2
+split;Pogodnie;2
+florencja;Pogodnie;1
+bolonia;Zachmurzenie całkowite, drobny deszcz;3

@@ -1,31 +1,22 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileReading {
 
-    public int countLine()throws IOException{
-        int lines = 0;
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(WeatherApp.FILE_NAME));
-        while (bufferedReader.readLine() != null) lines++;
-        bufferedReader.close();
-        return lines;
-    }
+    public List<String> fileReading() throws IOException {
 
-    public String fileReading(int line) throws IOException {
-        int count = 0;
         BufferedReader bufferedReader = new BufferedReader(new FileReader(WeatherApp.FILE_NAME));
-        String city = "";
-        String row = null;
+        List<String> cityList = new ArrayList<>();
+        String row;
 
-         while ((row = bufferedReader.readLine()) != null) {
-            if (count == line) {
-                city = row;
-                break;
-            }
-            count++;
+        while ((row = bufferedReader.readLine()) != null) {
+            cityList.add(row);
         }
+
         bufferedReader.close();
-        return city;
+        return cityList;
     }
 }

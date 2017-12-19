@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class WeatherApp {
 
@@ -8,24 +9,24 @@ public class WeatherApp {
 
     public static void main(String[] args) throws IOException {
 
-        ArrayList<WeatherInfo> weatherInfoArrayList = new ArrayList<>();
+        List<WeatherInfo> weatherInfoList = new ArrayList<>();
         FileReading fileReading = new FileReading();
+        WeatherApi weatherApi = new WeatherApi();
+        List<String> cityList = fileReading.fileReading();
 
-        int count = 0;
-        String city = "";
 
-        try {
-            WeatherApi api = new WeatherApi();
-            do {
-                city = fileReading.fileReading(count);
-                System.out.println(city);
-                weatherInfoArrayList.add(count, new WeatherInfo(city, api.getDescription(city), api.getTemperature(city)));
-                FileWriting.fileWriting(weatherInfoArrayList.get(count));
-                System.out.println(weatherInfoArrayList.get(count).toString());
-                count++;
-            } while (count < fileReading.countLine());
-        } catch (IOException e) {
-            System.err.println("Nie udało się pobrać informacji dla miasta " + city);
+        for (String cities : cityList) {
+            System.out.println(cities);
+            weatherInfoList.add(new WeatherInfo(cities, weatherApi.getDescription(cities), weatherApi.getTemperature
+                    (cities)));
+        }
+
+        for (WeatherInfo weatherInfos : weatherInfoList) {
+            try {
+                FileWriting.fileWriting(weatherInfos);
+            } catch (IOException e) {
+                System.err.println("Nie udało się zapisać pliku.");
+            }
         }
     }
 }
