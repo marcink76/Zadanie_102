@@ -21,12 +21,10 @@ public class WeatherApp {
                     (cities)));
         }
 
-        for (WeatherInfo weatherInfos : weatherInfoList) {
-            try {
-                FileWriting.fileWriting(weatherInfos);
-            } catch (IOException e) {
-                System.err.println("Nie udało się zapisać pliku.");
-            }
+        try {
+            FileWriting.fileWriting(weatherInfoList);
+        } catch (IOException e) {
+            System.err.println("Nie udało się zapisać pliku.");
         }
     }
 }

@@ -17,3 +17,23 @@ rzym;Pogodnie;2
 split;Pogodnie;2
 florencja;Pogodnie;1
 bolonia;Zachmurzenie całkowite, drobny deszcz;3
+rabat;Zachmurzenie zmienne;12
+teheran;Pogodnie;13
+bejrut;Zachmurzenie z rozpogodzeniami;22
+trypolis;Zachmurzenie całkowite, drobny deszcz;13
+sana;Pogodnie;20
+damaszek;Zachmurzenie z rozpogodzeniami;18
+adana;Zachmurzenie z rozpogodzeniami;20
+kinszasa;Zachmurzenie zmienne;29
+bagdad;Zachmurzenie zmienne;25
+ankara;Zachmurzenie całkowite;6
+mosul;Zachmurzenie całkowite;18
+kirkuk;Zachmurzenie całkowite;17
+silopi;Zachmurzenie całkowite;17
+mekka;Pogodnie;33
+medyna;Pogodnie;23
+lizbona;Pogodnie;9
+rzym;Zachmurzenie zmienne;3
+split;Niewielkie zachmurzenie;4
+florencja;Pogodnie;4
+bolonia;Zachmurzenie całkowite, drobny deszcz;4
